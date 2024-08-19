@@ -1,14 +1,14 @@
 -- startup.lua
  
 local cdc = require("cdc")
-local comms = require("comms")
 local move = require("move")
  
-rednet.open("right")
+rednet.open("left")
  
 local function run()
-    local data = cdc.getAll()
-    comms.send(data)
+    local machine = peripheral.wrap("right")
+    local data = cdc.getAll(machine)
+    rednet.send(4, data, "cdcData")
 end
  
 while true do
@@ -19,18 +19,18 @@ while true do
     end
     run()
     os.sleep(1)
-    turtle.turnRight()
+    turtle.turnLeft()
     move.fw(4)
-    turtle.turnRight()
+    turtle.turnLeft()
     for i = 1, 4 do
         run()
         os.sleep(1)
         move.fw(4)
     end
-    turtle.turnRight()
-    turtle.turnRight()
-    move.fw(4)
+    turtle.turnLeft()
     turtle.turnLeft()
     move.fw(4)
     turtle.turnRight()
+    move.fw(4)
+    turtle.turnLeft()
 end
