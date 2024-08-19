@@ -6,7 +6,7 @@ local files = {
 }
  
 for _, file in ipairs(files) do
-    shell.run("wget", "https://github.com/Rikys/Mekanism-x5-Plant-Manager/Turtle/" .. file)
+    shell.run("wget", "https://github.com/Rikys/Mekanism-x5-Plant-Manager/main/Turtle/" .. file)
 end
  
 -- Reboot turtle
