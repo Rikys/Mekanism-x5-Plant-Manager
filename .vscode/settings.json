@@ -2,7 +2,8 @@
     "Lua.diagnostics.globals": [
         "peripheral",
         "rednet",
-        "turtle"
+        "turtle",
+        "fs"
     ],
     "Lua.diagnostics.disable": [
         "undefined-field"
