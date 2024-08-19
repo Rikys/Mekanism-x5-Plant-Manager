@@ -3,7 +3,8 @@
         "peripheral",
         "rednet",
         "turtle",
-        "fs"
+        "fs",
+        "shell"
     ],
     "Lua.diagnostics.disable": [
         "undefined-field"
