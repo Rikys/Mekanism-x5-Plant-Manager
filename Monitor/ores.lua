@@ -22,4 +22,7 @@ function ores.drawOn(frame)
     end
 end
  
-return ores, ore_list
+
+ores.list = ore_list
+
+return ores

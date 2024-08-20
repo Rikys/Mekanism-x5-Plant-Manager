@@ -1,5 +1,5 @@
 local basalt = require("basalt")
-local ores, ore_list = require("ores")
+local ores = require("ores")
  
 local monitor = peripheral.wrap("right")
 monitor.setTextScale(0.5)
@@ -16,7 +16,7 @@ local flexBox = main:addFlexbox()
 
 local flexBoxRows = {}
 
-for i = 1, #ore_list do
+for i = 1, #ores.list do
     flexBoxRows[i] = flexBox:addFlexbox()
         :setSize("parent.w", "parent.h / 11")
         :setDirection("column")
