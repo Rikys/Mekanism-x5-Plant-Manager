@@ -14,18 +14,12 @@ local ore_list = {
     "Uranium"
 }
  
-function ores.draw(frame)
-    local flexBox = frame:addFlexbox()
-        :setSize("parent.w - 2", "parent.h - 2")
-        :setPosition(2,2)
-        :setJustifyContent("space-around")
-        :setBackground(colors.gray)
-        
+function ores.drawOn(frame)
     for i = 1, #ore_list do
-        flexBox:addLabel()
+        frame[i]:addLabel()
             :setText(ore_list[i])
             :setForeground(colors.white)
     end
 end
  
-return ores
+return ores, ore_list
