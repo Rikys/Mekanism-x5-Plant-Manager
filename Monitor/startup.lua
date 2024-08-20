@@ -18,6 +18,7 @@ local flexBoxRows = {}
 
 for i = 1, #ores.list do
     flexBoxRows[i] = flexBox:addFlexbox()
+        :setSize(6, "parent.h-2")
         :setDirection("column")
         :setJustifyContent("space-around")
         :setBackground(colors.gray)
