@@ -4,7 +4,8 @@
         "rednet",
         "turtle",
         "fs",
-        "shell"
+        "shell",
+        "colors"
     ],
     "Lua.diagnostics.disable": [
         "undefined-field"
