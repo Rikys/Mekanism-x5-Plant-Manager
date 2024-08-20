@@ -26,5 +26,12 @@ end
 
 ores.drawOn(flexBoxRows)
 
+for i = 1, 8 do
+    flexBoxRows[i]:addPane()
+        :setSize(3,2)
+        :setPosition(2,2)
+        :setBackground(colors.black)
+end
+
  
 basalt.autoUpdate()
